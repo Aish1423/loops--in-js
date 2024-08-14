@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var students = ["Mohit", "Arti", "Shubha", "Pardeep", "Chandrabhan"];
+                //         0       1        2          3            4
+        // console.log(students);
+        // console.log(students[4]);
+        console.log(students.length);
+
+        console.log("before", students);
+        students.push("Pinki", "Sonia")
+        students.pop()
+        students.unshift("Mansha", "Divanshu")
+        students.shift()
+
+        console.log("after", students);
+        
+
+        // console.log(students[0]);
+        // console.log(students[1]);
+        // console.log(students[2]);
+        // console.log(students[3]);
+        // console.log(students[4]);
+
+        for(let i = 0; i< students.length ; i++){
+            console.log(students[i])
+        }
+
+      //for in
+        for(let i in students){
+            console.log(students[i]);
+        }
+        
+       // for of
+        for(let i of students){
+            console.log(i);
+        }
+
+        students.forEach((ele, index)=>{
+            console.log(ele);
+        })
+
+
+        var marks = [12, 34,32,23,45]
+        var new_marks = marks.map((ele)=>{
+             if(ele<20){
+                return ele+2;
+             } else{ return ele}
+        })
+        console.log(new_marks);
+
+        var filtered_marks = marks.filter((ele)=>{
+            return ele>25
+        })
+        console.log(filtered_marks);
+        
+    </script>
+</body>
+</html>
